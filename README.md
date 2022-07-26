@@ -20,7 +20,9 @@ dm53 check --domain-name example.com
 > Note: Make sure AWS credentials are configured, following example uses env
 > variables
 > ```shell
-> AWS_ACCESS_KEY_ID=my-access-key AWS_SECRET_ACCESS_KEY=my-secret-access-key dm53 check --domain-name example.com
+> AWS_ACCESS_KEY_ID=my-access-key \
+> AWS_SECRET_ACCESS_KEY=my-secret-access-key \
+> dm53 check --domain-name example.com
 > ```
 > for more details see [boto3
 > docs](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html)
