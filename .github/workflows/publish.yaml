@@ -75,7 +75,8 @@ jobs:
       - name: Test
         run: |
           source $(poetry env info --path)/bin/activate # activate virtual environment
-          pytest tests
+          dm53 --help
+          dm53 validate-registration-details --path ./example-registration-details.json
 
       - name: Build
         run: poetry build
