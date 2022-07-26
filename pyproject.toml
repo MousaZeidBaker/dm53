@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dm53"
-version = "0.0.0"
+version = "0.1.0"
 description = "Domain monitoring & registration with AWS route53"
 authors = ["Mousa Zeid Baker"]
 packages = [
