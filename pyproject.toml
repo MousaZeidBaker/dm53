@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dm53"
-version = "0.1.1"
+version = "0.2.0"
 description = "Domain monitoring & registration with AWS route53"
 authors = ["Mousa Zeid Baker"]
 packages = [
@@ -25,7 +25,7 @@ classifiers=[
 include = ["LICENSE"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 typer = "^0.6.1"
 boto3 = "^1.24.36"
 pydantic = "^1.9.1"
