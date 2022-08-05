@@ -34,14 +34,24 @@ dm53 check --domain-name example.com --monitor --interval 5
 
 Register a domain if available
 
+```shell
+dm53 check --domain-name example.com --register --path /path/to/registration-details.json
+```
+
 > Note: Registration details must be provided through a JSON file, see [this
 > example](https://github.com/MousaZeidBaker/dm53/blob/master/example-registration-details.json)
 > or read more in [AWS
 > docs](https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_RegisterDomain.html)
 
+Run in background to ignore hangup signal with
+[nohup](https://man7.org/linux/man-pages/man1/nohup.1.html), forward output to
+`examplecom.out`
 ```shell
-dm53 check --domain-name example.com --register --path /path/to/registration-details.json
+nohup dm53 check --domain-name example.com --monitor > examplecom.out 2>&1 &
 ```
+
+> Note: The `nohup` command prints a shell job ID and a process ID. Terminate
+> the process with `kill -9 <PID>`.
 
 ## Contributing
 Contributions are welcome via pull requests.
